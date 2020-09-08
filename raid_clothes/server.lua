@@ -150,7 +150,7 @@ AddEventHandler("raid_clothes:get_outfit",function(slot)
 
     if not characterId then return end
 
-    MySQL.Async.fetchall("SELECT * FROM character_outfits WHERE cid = @cid and slot = @slot", {
+    MySQL.Async.fetchAll("SELECT * FROM character_outfits WHERE cid = @cid and slot = @slot", {
         ['cid'] = characterId,
         ['slot'] = slot
     }, function(result)
@@ -199,7 +199,7 @@ AddEventHandler("raid_clothes:set_outfit",function(slot, name, data)
 
     if not characterId then return end
 
-    MySQL.Async.fetchall("SELECT slot FROM character_outfits WHERE cid = @cid and slot = @slot", {
+    MySQL.Async.fetchAll("SELECT slot FROM character_outfits WHERE cid = @cid and slot = @slot", {
         ['cid'] = characterId,
         ['slot'] = slot
     }, function(result)
@@ -266,7 +266,7 @@ AddEventHandler("raid_clothes:list_outfits",function()
 
     if not cid then return end
 
-    MySQL.Async.fetchall("SELECT slot, name FROM character_outfits WHERE cid = @cid", {['cid'] = cid}, function(skincheck)
+    MySQL.Async.fetchAll("SELECT slot, name FROM character_outfits WHERE cid = @cid", {['cid'] = cid}, function(skincheck)
     	TriggerClientEvent("hotel:list",src, skincheck)
 	end)
 end)
