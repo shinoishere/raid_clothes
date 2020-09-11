@@ -38,7 +38,8 @@ CREATE TABLE IF NOT EXISTS `character_face` (
   `hairColor` varchar(255) NOT NULL DEFAULT '',
   `headBlend` varchar(255) NOT NULL DEFAULT '',
   `headStructure` varchar(255) NOT NULL DEFAULT '',
-  `headOverlay` varchar(255) NOT NULL DEFAULT ''
+  `headOverlay` varchar(255) NOT NULL DEFAULT '',
+  `shapeSecond` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- shx_rpv.character_face: ~0 rows (yaklaşık) tablosu için veriler indiriliyor
